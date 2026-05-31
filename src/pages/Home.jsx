@@ -83,8 +83,12 @@ export default function Home() {
         <div className="container cta-content">
           <h2>Prêt à propulser votre business ou à lancer votre carrière ?</h2>
           <div className="cta-btns">
-            <Link to="/projects" className="btn-primary" style={{ border: '2px solid white' }}>Je veux Recruter</Link>
-            <Link to="/register" className="btn-secondary" style={{ border: '2px solid white' }}>Je veux Gagner</Link>
+            <Link to="/projects" className="cta-btn cta-btn-primary">
+              <Briefcase size={20} /> Je veux Recruter
+            </Link>
+            <Link to="/register" className="cta-btn cta-btn-secondary">
+              <UserPlus size={20} /> Je veux Gagner
+            </Link>
           </div>
         </div>
       </section>
