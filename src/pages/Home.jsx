@@ -133,7 +133,7 @@ export default function Home() {
                 <div key={i} className="relative z-10 flex flex-col items-center text-center">
                   <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-2xl font-black mb-6 shadow-lg ring-8 ring-slate-900">
                     {item.step}
-                  }
+                  </div>
                   <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                   <p className="text-slate-400 text-sm">{item.desc}</p>
                 </div>
