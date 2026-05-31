@@ -46,7 +46,7 @@ export default function Home() {
       <section className="value-props">
         <div className="container grid-3">
           {[
-            { icon: <Award />, title: 'Expertise Diversifiée', desc: 'Accédez à talents spécialisés dans les marchés émergents et les standards mondiaux.' },
+            { icon: <Award />, title: 'Expertise Diversifiée', desc: 'Accédez à des talents spécialisés dans les marchés émergents et les standards mondiaux.' },
             { icon: <TrendingDown />, title: 'Coûts Optimisés', desc: 'Une qualité premium à des tarifs compétitifs sur le marché global.' },
             { icon: <Lightbulb />, title: 'Insight Culturel', desc: 'Une expertise locale pour les entreprises souhaitant s\'étendre en Afrique.' },
           ].map((prop, i) => (
@@ -83,8 +83,8 @@ export default function Home() {
         <div className="container cta-content">
           <h2>Prêt à propulser votre business ou à lancer votre carrière ?</h2>
           <div className="cta-btns">
-            <Link to="/projects" className="btn-primary">Je veux Recruter</Link>
-            <Link to="/register" className="btn-secondary">Je veux Gagner</Link>
+            <Link to="/projects" className="btn-primary" style={{ border: '2px solid white' }}>Je veux Recruter</Link>
+            <Link to="/register" className="btn-secondary" style={{ border: '2px solid white' }}>Je veux Gagner</Link>
           </div>
         </div>
       </section>
