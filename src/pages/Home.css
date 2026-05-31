@@ -1,13 +1,12 @@
 /* 
   Styles spécifiques pour la Home Page (Landing) 
-  pour éviter les conflits avec les styles globaux de l'application.
 */
 
 .landing-page-wrapper {
-  all: initial;
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: #0f172a; /* slate-900 */
   background-color: #ffffff;
+  min-height: 100vh;
 }
 
 .landing-page-wrapper * {
