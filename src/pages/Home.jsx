@@ -34,7 +34,7 @@ export default function Home() {
           
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight mb-6 font-['Syne']">
-              Unlock the Power of <br />
+              TEST STITCH VERSION 2 <br />
               <span className="text-orange-600">African Talent</span>
             </h1>
             <p className="text-slate-600 text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
