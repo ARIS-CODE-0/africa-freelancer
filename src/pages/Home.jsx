@@ -14,6 +14,7 @@ const CATEGORIES = [
 ]
 
 export default function Home() {
+  // VERSION STITCH FINAL - BUILD 2026-05-31
   const { data: projects } = useQuery({
     queryKey: ['projects-home'],
     queryFn: () => projectsAPI.list({ status: 'OPEN' }).then(r => r.data.results || r.data),
