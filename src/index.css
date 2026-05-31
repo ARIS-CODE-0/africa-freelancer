@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* Africa Freelancer - Design System */
 /* Palette : vert africain + orange chaleureux + tons sable */
