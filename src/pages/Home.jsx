@@ -1,95 +1,124 @@
 import { Link } from 'react-router-dom'
+import { Search, Code, Megaphone, Palette, PenTool, Globe, Film, Award, TrendingDown, Lightbulb, CheckCircle, ArrowRight, UserPlus, Briefcase } from 'lucide-react'
 import './Home.css'
 
 export default function Home() {
   return (
     <div className="landing-page-wrapper">
-      {/* ── HERO ────────────────────────────── */}
-      <section className="hero">
-        <div className="animate-fade-up" style={{ animationDelay: '0.2s' }}>
-          <h1 className="hero-title">La plateforme freelance<br /><span>made in Africa 🌍</span></h1>
-          <p className="hero-sub">
-            Connectez-vous avec les meilleurs talents africains. <br />
-            Paiements sécurisés via Mobile Money, Orange Money, M-Pesa et plus.
-          </p>
-          <div className="hero-actions">
-            <Link to="/projects" className="btn btn-primary">Trouver un talent <span style={{ marginLeft: '8px' }}>→</span></Link>
-            <Link to="/register" className="btn btn-outline">Devenir freelance</Link>
+      <header className="hero">
+        <div className="container hero-grid">
+          <div className="hero-text">
+            <h1>Libérez le potentiel du <span className="text-gradient">talent africain</span></h1>
+            <p>La marketplace de freelances la plus diversifiée et qualifiée du continent. Trouvez des développeurs, designers et créateurs experts de Lagos à Nairobi.</p>
+            <div className="search-bar">
+              <Search className="search-icon" size={20} />
+              <input type="text" placeholder="Quel service recherchez-vous aujourd'hui ?" />
+              <button className="btn-primary">Rechercher</button>
+            </div>
+          </div>
+          <div className="hero-image">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" alt="Professionnels africains collaborant" />
           </div>
         </div>
-      </section>
+      </header>
 
-      {/* ── CATEGORIES ───────────────────────── */}
-      <section className="section container">
-        <h2 className="section-title animate-fade-up">Explorer par expertise</h2>
-        <div className="categories-grid">
-          <div className="cat-card glass animate-fade-up" style={{ animationDelay: '0.3s' }}>
-            <span className="cat-icon">💻</span>
-            <h3>Développement Web</h3>
-            <p style={{ color: 'var(--text-muted)' }}>Sites vitrines, E-commerce, Applications Web sur mesure.</p>
-          </div>
-          <div className="cat-card glass animate-fade-up" style={{ animationDelay: '0.4s' }}>
-            <span className="cat-icon">🎨</span>
-            <h3>Design UI/UX</h3>
-            <p style={{ color: 'var(--text-muted)' }}>Interfaces modernes, prototypage Figma, design centré utilisateur.</p>
-          </div>
-          <div className="cat-card glass animate-fade-up" style={{ animationDelay: '0.5s' }}>
-            <span className="cat-icon">📢</span>
-            <h3>Marketing Digital</h3>
-            <p style={{ color: 'var(--text-muted)' }}>SEO, Growth Hacking, Gestion de campagnes publicitaires.</p>
-          </div>
-          <div className="cat-card glass animate-fade-up" style={{ animationDelay: '0.6s' }}>
-            <span className="cat-icon">📈</span>
-            <h3>Consulting Business</h3>
-            <p style={{ color: 'var(--text-muted)' }}>Stratégie de croissance, optimisation de processus, analyse de marché.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── TESTIMONIALS ─────────────────────── */}
-      <section className="section" style={{ background: 'rgba(255,255,255,0.03)' }}>
+      <section id="services" className="categories">
         <div className="container">
-          <h2 className="section-title animate-fade-up">Ils nous font confiance</h2>
-          <div className="testimonials-grid">
-            <div className="testi-card glass animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              <div className="stars">★★★★★</div>
-              <p className="testi-comment">"L'équipe d'Africa Freelancer a transformé notre vision en un produit concret. Le design est époustouflant et la performance est au rendez-vous."</p>
-              <div style={{ display: 'flex', alignItems: 'center', marginTop: '20px', gap: '15px' }}>
-                <img src="https://i.pravatar.cc/150?u=amadou" className="testi-avatar" alt="Amadou Diallo" />
-                <div>
-                  <span className="testi-name">Amadou Diallo</span>
-                  <span className="testi-role">CEO de TechVision</span>
-                </div>
+          <h2 className="section-title">Catégories Populaires</h2>
+          <div className="category-grid">
+            {[
+              { icon: <Code />, label: 'Développement Web' },
+              { icon: <Megaphone />, label: 'Marketing Digital' },
+              { icon: <Palette />, label: 'Design Graphique' },
+              { icon: <PenTool />, label: 'Rédaction Web' },
+              { icon: <Globe />, label: 'Traduction' },
+              { icon: <Film />, label: 'Montage Vidéo' },
+            ].map((cat, i) => (
+              <div key={i} className="cat-card">
+                <div className="cat-icon">{cat.icon}</div>
+                <h3>{cat.label}</h3>
               </div>
-            </div>
-            <div className="testi-card glass animate-fade-up" style={{ animationDelay: '0.3s' }}>
-              <div className="stars">★★★★★</div>
-              <p className="testi-comment">"Un professionnalisme rare. Ils ont compris exactement nos besoins et nous ont livrés un site qui attire réellement des clients."</p>
-              <div style={{ display: 'flex', alignItems: 'center', marginTop: '20px', gap: '15px' }}>
-                <img src="https://i.pravatar.cc/150?u=fatou" className="testi-avatar" alt="Fatou Traoré" />
-                <div>
-                  <span className="testi-name">Fatou Traoré</span>
-                  <span className="testi-role">Fondatrice de Sahel Art</span>
-                </div>
-              </div>
-            </div>
-            <div className="testi-card glass animate-fade-up" style={{ animationDelay: '0.4s' }}>
-              <div className="stars">★★★★☆</div>
-              <p className="testi-comment">"Très bonne réactivité et une qualité d'exécution impeccable. Je recommande vivement pour tout projet sérieux de digitalisation."</p>
-              <div style={{ display: 'flex', alignItems: 'center', marginTop: '20px', gap: '15px' }}>
-                <img src="https://i.pravatar.cc/150?u=koffi" className="testi-avatar" alt="Koffi Mensah" />
-                <div>
-                  <span className="testi-name">Koffi Mensah</span>
-                  <span className="testi-role">Directeur Marketing, Global Logistics</span>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <footer style={{ textAlign: 'center', padding: '40px', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-        &copy; 2026 Africa Freelancer. Propulsé par l'excellence africaine.
+      <section className="value-props">
+        <div className="container grid-3">
+          {[
+            { icon: <Award />, title: 'Expertise Diversifiée', desc: 'Accédez à talents spécialisés dans les marchés émergents et les standards mondiaux.' },
+            { icon: <TrendingDown />, title: 'Coûts Optimisés', desc: 'Une qualité premium à des tarifs compétitifs sur le marché global.' },
+            { icon: <Lightbulb />, title: 'Insight Culturel', desc: 'Une expertise locale pour les entreprises souhaitant s\'étendre en Afrique.' },
+          ].map((prop, i) => (
+            <div key={i} className="prop-card">
+              <div className="prop-icon">{prop.icon}</div>
+              <h3>{prop.title}</h3>
+              <p>{prop.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="how-it-works">
+        <div className="container">
+          <h2 className="section-title">Comment ça marche</h2>
+          <div className="steps-flow">
+            {[
+              { step: '1', title: 'Postez un besoin', desc: 'Décrivez précisément vos attentes pour votre projet.' },
+              { step: '2', title: 'Choisissez le talent', desc: 'Sélectionnez le meilleur freelance pour votre mission.' },
+              { step: '3', title: 'Collaborez', desc: 'Travaillez ensemble via notre plateforme sécurisée.' },
+              { step: '4', title: 'Recevez vos livrables', desc: 'Obtenez un résultat professionnel et de haute qualité.' },
+            ].map((s, i) => (
+              <div key={i} className="step">
+                <span className="step-num">{s.step}</span>
+                <h4>{s.title}</h4>
+                <p>{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="cta-banner">
+        <div className="container cta-content">
+          <h2>Prêt à propulser votre business ou à lancer votre carrière ?</h2>
+          <div className="cta-btns">
+            <Link to="/projects" className="btn-primary">Je veux Recruter</Link>
+            <Link to="/register" className="btn-secondary">Je veux Gagner</Link>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div className="container footer-grid">
+          <div className="footer-brand">
+            <a href="#" className="logo">
+              <Globe size={20} /> Africa Freelancer
+            </a>
+            <p>Le cœur battant du talent freelance africain.</p>
+          </div>
+          <div className="footer-col">
+            <h4>Entreprise</h4>
+            <a href="#">À propos</a>
+            <a href="#">Carrières</a>
+            <a href="#">Presse</a>
+          </div>
+          <div className="footer-col">
+            <h4>Support</h4>
+            <a href="#">Centre d'aide</a>
+            <a href="#">Confiance & Sécurité</a>
+            <a href="#">Conditions d'utilisation</a>
+          </div>
+          <div className="footer-col">
+            <h4>Communauté</h4>
+            <a href="#">Blog</a>
+            <a href="#">Forum</a>
+            <a href="#">Événements</a>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>&copy; 2026 Africa Freelancer Inc. Tous droits réservés.</p>
+        </div>
       </footer>
     </div>
   )
