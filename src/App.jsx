@@ -27,20 +27,19 @@ function PrivateRoute({ children }) {
 function AppRoutes() {
   return (
     <>
-      <Navbar />
       <Routes>
         <Route path="/"               element={<Home />} />
         <Route path="/login"          element={<Login />} />
         <Route path="/register"       element={<Register />} />
-        <Route path="/projects"       element={<Projects />} />
-        <Route path="/projects/:id"   element={<ProjectDetail />} />
-        <Route path="/freelances"     element={<Freelances />} />
-        <Route path="/freelances/:id" element={<FreelanceProfile />} />
-        <Route path="/create-project" element={<PrivateRoute><CreateProject /></PrivateRoute>} />
-        <Route path="/dashboard"      element={<PrivateRoute><Dashboard /></PrivateRoute>} />
-        <Route path="/messages"       element={<PrivateRoute><Messages /></PrivateRoute>} />
-        <Route path="/messages/:id"   element={<PrivateRoute><Messages /></PrivateRoute>} />
-        <Route path="/proposals"      element={<PrivateRoute><MyProposals /></PrivateRoute>} />
+        <Route path="/projects"       element={<><Navbar /><Projects /></>} />
+        <Route path="/projects/:id"   element={<><Navbar /><ProjectDetail /></>} />
+        <Route path="/freelances"     element={<><Navbar /><Freelances /></>} />
+        <Route path="/freelances/:id" element={<><Navbar /><FreelanceProfile /></>} />
+        <Route path="/create-project" element={<PrivateRoute><><Navbar /><CreateProject /></></PrivateRoute>} />
+        <Route path="/dashboard"      element={<PrivateRoute><><Navbar /><Dashboard /></></PrivateRoute>} />
+        <Route path="/messages"       element={<PrivateRoute><><Navbar /><Messages /></></PrivateRoute>} />
+        <Route path="/messages/:id"   element={<PrivateRoute><><Navbar /><Messages /></></PrivateRoute>} />
+        <Route path="/proposals"      element={<PrivateRoute><><Navbar /><MyProposals /></></PrivateRoute>} />
         <Route path="*"               element={<Navigate to="/" />} />
       </Routes>
     </>
