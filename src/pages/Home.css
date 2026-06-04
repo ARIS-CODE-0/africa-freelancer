@@ -359,7 +359,7 @@ footer {
 @media (max-width: 480px) {
     .container { padding: 0 1rem; }
     .hero { padding: 60px 0 !important; }
-    .hero-text h1 { font-size: 2rem; }
+    .hero-text h1 { font-size: 1.75rem; text-align: center; }
     .search-bar {
         flex-direction: column;
         border-radius: 20px;
