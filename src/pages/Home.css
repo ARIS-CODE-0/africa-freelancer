@@ -88,6 +88,10 @@
 }
 
 .search-bar .btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   background: #F59E0B !important; /* Force Orange */
   color: white !important;
   border: none !important;

@@ -11,9 +11,11 @@ export default function Home() {
             <h1>Libérez le potentiel du <span className="text-gradient">talent africain</span></h1>
             <p>La marketplace de freelances la plus diversifiée et qualifiée du continent. Trouvez des développeurs, designers et créateurs experts de Lagos à Nairobi.</p>
             <div className="search-bar">
-              <Search className="search-icon" size={20} />
               <input type="text" placeholder="Quel service recherchez-vous aujourd'hui ?" />
-              <button className="btn-primary">Rechercher</button>
+              <button className="btn-primary">
+                <Search size={20} />
+                Rechercher
+              </button>
             </div>
           </div>
           <div className="hero-image">
