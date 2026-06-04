@@ -232,10 +232,10 @@
   font-size: 0.95rem;
 }
 
-/* --- CTA --- */
+/* --- CTA --- *
 .cta-banner {
   padding: 120px 0;
-}
+}*/
 
 .cta-content {
   background: #F59E0B !important;
@@ -374,7 +374,7 @@ footer {
         width: 100%;
     }
     .steps-flow { grid-template-columns: 1fr; }
-    .cta-content { padding: 80px 24px; }
+    .cta-content { padding: 40px 24px; }
     .cta-content h2 { font-size: 1.5rem; }
     .cta-btns { flex-direction: column; }
 }
