@@ -19,7 +19,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-image">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" alt="Professionnels africains collaborant" />
+            <img src="/imgs/hero.png" />
           </div>
         </div>
       </header>
@@ -82,15 +82,17 @@ export default function Home() {
       </section>
 
       <section className="cta-banner">
-        <div className="container cta-content">
-          <h2>Prêt à propulser votre business ou à lancer votre carrière ?</h2>
-          <div className="cta-btns">
-            <Link to="/projects" className="cta-btn cta-btn-primary">
-              <Briefcase size={20} /> Je veux Recruter
-            </Link>
-            <Link to="/register" className="cta-btn cta-btn-secondary">
-              <UserPlus size={20} /> Je veux Gagner
-            </Link>
+        <div className="container">
+          <div className="cta-content">
+            <h2>Prêt à propulser votre business ou à lancer votre carrière ?</h2>
+            <div className="cta-btns">
+              <Link to="/projects" className="cta-btn cta-btn-primary">
+                <Briefcase size={20} /> Je veux Recruter
+              </Link>
+              <Link to="/register" className="cta-btn cta-btn-secondary">
+                <UserPlus size={20} /> Je veux Gagner
+              </Link>
+            </div>
           </div>
         </div>
       </section>
