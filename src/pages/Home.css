@@ -456,8 +456,9 @@ footer {
 }
 
 @media (max-width: 480px) {
-<<<<<<< HEAD
+  .container { padding: 0 1rem; }
   .hero { padding: 60px 0 50px; }
+  .hero-text h1 { font-size: 2rem; }
   .search-bar {
     flex-direction: column;
     border-radius: 16px;
@@ -474,26 +475,4 @@ footer {
   .cta-content h2 { font-size: 1.5rem; }
   .cta-btns { flex-direction: column; align-items: center; }
   .cta-btn { width: 100%; justify-content: center; }
-=======
-    .container { padding: 0 1rem; }
-    .hero { padding: 60px 0 !important; }
-    .hero-text h1 { font-size: 2rem; }
-    .search-bar {
-        flex-direction: column;
-        border-radius: 20px;
-        padding: 12px;
-        gap: 12px;
-    }
-    .search-bar input {
-        padding: 0;
-        text-align: center;
-    }
-    .search-bar .btn-primary {
-        width: 100%;
-    }
-    .steps-flow { grid-template-columns: 1fr; }
-    .cta-content { padding: 40px 24px; }
-    .cta-content h2 { font-size: 1.5rem; }
-    .cta-btns { flex-direction: column; }
->>>>>>> parent of 9d5a682 (style: reduce H1 font size on mobile to prevent clipping)
 }
