@@ -92,7 +92,7 @@ export default function CreateProject() {
             </div>
 
             {/* Catégorie + Niveau */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+            <div className="responsive-grid-2">
               <div className="form-group">
                 <label className="form-label">Catégorie</label>
                 <select className="form-input" value={form.category} onChange={e => setForm({ ...form, category: e.target.value })}>
@@ -110,7 +110,7 @@ export default function CreateProject() {
             </div>
 
             {/* Budget */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+            <div className="responsive-grid-2">
               <div className="form-group">
                 <label className="form-label">Budget (XOF) *</label>
                 <input className="form-input" type="number" placeholder="50000"

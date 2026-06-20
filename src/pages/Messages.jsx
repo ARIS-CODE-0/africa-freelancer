@@ -1,6 +1,6 @@
 // src/pages/Messages.jsx
 import { useState, useEffect, useRef } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { messagesAPI } from '../api/client'
 import { useAuth } from '../context/AuthContext'
@@ -10,6 +10,7 @@ export default function Messages() {
   const { id: contactId } = useParams()
   const { user } = useAuth()
   const queryClient = useQueryClient()
+  const navigate = useNavigate()
   const [text, setText] = useState('')
   const bottomRef = useRef(null)
 
@@ -51,10 +52,10 @@ export default function Messages() {
   return (
     <div className="page" style={{ paddingBottom: 0 }}>
       <div className="container" style={{ padding: 0 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '300px 1fr', height: 'calc(100vh - 68px)' }}>
+        <div className={`messages-layout${contactId ? ' conversation-active' : ''}`}>
 
           {/* ── Liste conversations ─────────────── */}
-          <div style={{ borderRight: '1px solid var(--sand-dark)', background: 'white', overflowY: 'auto' }}>
+          <div className="messages-list" style={{ borderRight: '1px solid var(--sand-dark)', background: 'white', overflowY: 'auto' }}>
             <div style={{ padding: '20px 16px', borderBottom: '1px solid var(--sand-dark)', display: 'flex', alignItems: 'center', gap: 10 }}>
               <MessageSquare size={20} color="var(--green)" />
               <h2 style={{ fontSize: 17, fontWeight: 700 }}>Messages</h2>
@@ -83,9 +84,13 @@ export default function Messages() {
 
           {/* ── Zone de chat ────────────────────── */}
           {contactId ? (
-            <div style={{ display: 'flex', flexDirection: 'column', background: 'var(--sand)' }}>
+            <div className="messages-chat" style={{ display: 'flex', flexDirection: 'column', background: 'var(--sand)' }}>
               {/* Header */}
               <div style={{ padding: '16px 24px', background: 'white', borderBottom: '1px solid var(--sand-dark)', display: 'flex', alignItems: 'center', gap: 12 }}>
+                {/* Back button mobile */}
+                <button className="hide-desktop messages-back-btn" onClick={() => navigate('/messages')} aria-label="Retour">
+                  ←
+                </button>
                 <div style={{ width: 38, height: 38, borderRadius: '50%', background: 'var(--green-soft)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, color: 'var(--green)', fontSize: 16 }}>
                   {(inbox.find(m => String(m.sender === user?.id ? m.receiver : m.sender) === contactId)?.other_user_email?.[0] || '?').toUpperCase()}
                 </div>

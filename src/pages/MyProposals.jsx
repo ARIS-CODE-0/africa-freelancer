@@ -30,7 +30,7 @@ export default function MyProposals() {
         <p style={{ color: 'var(--text-soft)', marginBottom: 32 }}>Suivez l'état de vos candidatures</p>
 
         {/* Stats */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16, marginBottom: 32 }}>
+        <div className="responsive-stats-3">
           {[
             { label: 'Total', value: stats.total, color: 'var(--sand-dark)' },
             { label: 'Acceptées', value: stats.accepted, color: 'var(--green-soft)' },

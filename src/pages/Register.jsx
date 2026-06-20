@@ -113,7 +113,7 @@ export default function Register() {
             </div>
 
             {/* Sélection du rôle */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 24 }}>
+            <div className="responsive-grid-2" style={{ gap: 12, marginBottom: 24 }}>
               {[
                 { value: 'FREELANCE', label: 'Je suis Freelance', emoji: '💼' },
                 { value: 'CLIENT', label: 'Je cherche des talents', emoji: '🏢' },
@@ -174,7 +174,7 @@ export default function Register() {
             </div>
 
             <form onSubmit={handleProfileSubmit}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+              <div className="responsive-grid-2" style={{ gap: 12 }}>
                 <div className="form-group">
                   <label className="form-label">Prénom</label>
                   <input className="form-input" name="first_name" placeholder="Jean" value={profile.first_name} onChange={handleProfileChange} required />

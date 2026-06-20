@@ -91,7 +91,7 @@ export default function ProjectDetail() {
   return (
     <div className="page">
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: 32, alignItems: 'start' }}>
+        <div className="responsive-grid-wide">
 
           {/* ── Colonne principale ─────────────── */}
           <div>
@@ -155,7 +155,7 @@ export default function ProjectDetail() {
             {showProposalForm && (
               <div className="card" style={{ marginTop: 24, borderLeft: '4px solid var(--green)' }}>
                 <h3 style={{ marginBottom: 20 }}>Votre offre</h3>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                <div className="responsive-grid-2">
                   <div className="form-group">
                     <label className="form-label">Prix proposé (XOF)</label>
                     <input className="form-input" type="number" placeholder="25000"

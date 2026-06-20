@@ -54,12 +54,12 @@ export default function Dashboard() {
           )}
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 360px', gap: 32, alignItems: 'start' }}>
+        <div className="responsive-grid">
 
           {/* ── Colonne principale ─────────────── */}
           <div>
             {/* Stats rapides */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16, marginBottom: 32 }}>
+            <div className="responsive-stats-3">
               <StatCard
                 icon={<Briefcase size={24} color="var(--green)" />}
                 label={isFreelance ? 'Projets en cours' : 'Projets publiés'}

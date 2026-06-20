@@ -25,7 +25,7 @@ export default function FreelanceProfile() {
   return (
     <div className="page">
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 320px', gap: 32, alignItems: 'start' }}>
+        <div className="responsive-grid-wide">
 
           {/* ── Infos principales ─────────────── */}
           <div>
